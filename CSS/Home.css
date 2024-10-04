@@ -1,0 +1,197 @@
+/* body{
+    background-image: url(../IMAGES/wall\ 3.png);
+} */
+
+navbar {
+    background-color: #4e4b4b;
+    border: none; /* Remove default border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+    transition: background-color 0.3s ease;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #000000;
+    padding: 15px 20px;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ffffff; /* Change color on hover */
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the toggle button */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggle:hover {
+    background-color: #f39c12; /* Change background on hover */
+}
+
+/* Navbar Collapse Animation */
+.collapse.navbar-collapse {
+    transition: max-height 0.3s ease;
+}
+
+.collapse.navbar-collapse.collapse.in {
+    max-height: 500px; /* Adjust according to the content */
+}
+
+.collapse.navbar-collapse:not(.in) {
+    max-height: 0;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    .navbar-nav > li > a {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+
+.container-fluid {
+    background-color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#nav-right{
+    margin-right: 50px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Ensure images scale well */
+}
+
+/* Carousel Caption Responsiveness */
+@media (max-width: 768px) {
+    .carousel-caption {
+        margin-left: 20px; /* Add some left margin to keep it from touching the edge */
+        text-align: left; /* Align text to the left */
+        top: 50%; /* Vertically center the caption */
+        transform: translateY(-50%); /* Ensure vertical centering */
+        left: 0; /* Align to the left side */
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 1em; /* Adjust caption text size for smaller screens */
+    }
+
+    .carousel-inner img {
+        max-height: 400px; /* Limit image height on smaller screens */
+    }
+}
+
+/* General styles for desktop */
+.carousel-inner {
+    height: 400px;
+}
+
+.carousel-caption {
+    position: absolute; /* Stay inside the carousel */
+    top: 50%; /* Vertically centered */
+    left: 0; /* Align to the left */
+    transform: translateY(-50%); /* Maintain vertical centering */
+    margin-left: 20px; /* Add space from the left edge */
+    color: #fff;
+    z-index: 10;
+    text-align: left; /* Align text to the left */
+}
+
+
+.social-media {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 20px; /* Align to the right */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    z-index: 15; /* Ensure it's above the images */
+    text-align: center; /* Center the text horizontally */
+}
+
+.social-icon {
+    display: block; /* Stack links vertically */
+    color: #ffffff; /* Change to desired color */
+    text-decoration: none; /* Remove underline */
+    margin: 5px 0; /* Add some spacing between icons */
+    font-size: 1.2em; /* Adjust size */
+    transition: color 0.3s; /* Add hover effect */
+}
+
+.social-icon img {
+    width: 40px; /* Adjust size */
+    height: auto; /* Ensure images scale well */
+    margin-top: 30px;
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+
+  
+
+.carousel-inner {
+    overflow: hidden; /* Ensure the inner container doesn't clip the animation */
+  }
+
+  .carousel-caption h1, .carousel-caption p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a soft shadow */
+  }
+  
+  
+  .carousel-caption {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 20px; /* Adds some space around the text */
+    border-radius: 10px; /* Gives it smooth edges */
+    transform: translateY(100px); /* Increased translation for more visible movement */
+    animation: fadeInUp 2s ease-out forwards; /* Longer animation for smoother entry */
+  }
+  
+  .carousel-inner .active .carousel-caption {
+    animation-delay: 0.5s; /* Delay for active caption */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px); /* Start from a more noticeable offset */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at the original position */
+      margin-top: -100px;
+    }
+  }
+  
