@@ -1,0 +1,23 @@
+name: "CodeQL"
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: python # Change as necessary
+      - name: Build
+        run: |
+          # Build your project
+          echo "Building..."
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
